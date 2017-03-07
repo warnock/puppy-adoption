@@ -48,7 +48,9 @@ function fates(roll) {
 }
 
 function rollNumber(min, max) {
-  return Math.random() * (max - min) + min;//MAKE INT
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 var rest = function() {
